@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Your Show</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  🎬 Book Your Show
+</header>
+
+<!-- SEARCH -->
+<input type="text" id="search" placeholder="🔍 Search movies...">
+
+<!-- MOVIES -->
+<div class="movies">
+
+ <!-- Movie 1 -->
+<div class="movie">
+  <img src="images/iron.jpg">
+  <div class="info">
+    <div>
+      <h3>Iron Man</h3>
+      <p class="meta">Action • 2h 6m</p>
+    </div>
+    <span class="rating">⭐ 7.9</span>
+  </div>
+  <button class="book-btn" data-movie="Iron Man" data-poster="images/iron.jpg">Book Now</button>
+</div>
+
+<!-- Movie 2 -->
+<div class="movie">
+  <img src="images/spi.jpg">
+  <div class="info">
+    <div>
+      <h3>Spider-Man</h3>
+      <p class="meta">Action • 2h 28m</p>
+    </div>
+    <span class="rating">⭐ 8.5</span>
+  </div>
+  <button class="book-btn" data-movie="Spider-Man" data-poster="images/spi.jpg">Book Now</button>
+</div>
+
+<!-- Movie 3 -->
+<div class="movie">
+  <img src="images/hul.jpg">
+  <div class="info">
+    <div>
+      <h3>Hulk</h3>
+      <p class="meta">Action • 2h 18m</p>
+    </div>
+    <span class="rating">⭐ 7.0</span>
+  </div>
+  <button class="book-btn" data-movie="Hulk" data-poster="images/hul.jpg">Book Now</button>
+</div>
+
+<!-- Movie 4 -->
+<div class="movie">
+  <img src="images/tho.jpg">
+  <div class="info">
+    <div>
+      <h3>Thor</h3>
+      <p class="meta">Fantasy • 2h 10m</p>
+    </div>
+    <span class="rating">⭐ 7.8</span>
+  </div>
+  <button class="book-btn" data-movie="Thor" data-poster="images/tho.jpg">Book Now</button>
+</div>
+
+<!-- Movie 5 -->
+<div class="movie">
+  <img src="images/cap.jpg">
+  <div class="info">
+    <div>
+      <h3>Captain America</h3>
+      <p class="meta">Action • 2h 4m</p>
+    </div>
+    <span class="rating">⭐ 8.0</span>
+  </div>
+  <button class="book-btn" data-movie="Captain America" data-poster="images/cep.jpg">Book Now</button>
+</div>
+
+<!-- Movie 6 -->
+<div class="movie">
+  <img src="images/inc.jpg">
+  <div class="info">
+    <div>
+      <h3>Inception</h3>
+      <p class="meta">Sci-Fi • 2h 28m</p>
+    </div>
+    <span class="rating">⭐ 8.8</span>
+  </div>
+  <button class="book-btn" data-movie="Inception" data-poster="images/inc.jpg">Book Now</button>
+</div>
+
+<!-- Movie 7 -->
+<div class="movie">
+  <img src="images/jur.jpg">
+  <div class="info">
+    <div>
+      <h3>Jurassic World</h3>
+      <p class="meta">Adventure • 2h 5m</p>
+    </div>
+    <span class="rating">⭐ 7.5</span>
+  </div>
+  <button class="book-btn" data-movie="Jurassic World" data-poster="images/jur.jpg">Book Now</button>
+</div>
+
+<!-- Movie 8 -->
+<div class="movie">
+  <img src="images/potter.jpg">
+  <div class="info">
+    <div>
+      <h3>Harry Potter</h3>
+      <p class="meta">Fantasy • 2h 30m</p>
+    </div>
+    <span class="rating">⭐ 8.2</span>
+  </div>
+  <button class="book-btn" data-movie="Harry Potter" data-poster="images/harry.jpg">Book Now</button>
+</div>
+
+<!-- Movie 9 -->
+<div class="movie">
+  <img src="images/fantastic.jpg">
+  <div class="info">
+    <div>
+      <h3>Fantastic Beasts</h3>
+      <p class="meta">Fantasy • 2h 12m</p>
+    </div>
+    <span class="rating">⭐ 7.3</span>
+  </div>
+  <button class="book-btn" data-movie="Fantastic Beasts" data-poster="images/potter.jpg">Book Now</button>
+</div>
+
+<!-- Movie 10 -->
+<div class="movie">
+  <img src="images/knight.jpg">
+  <div class="info">
+    <div>
+      <h3>Dark Knight</h3>
+      <p class="meta">Action • 2h 32m</p>
+    </div>
+    <span class="rating">⭐ 9.0</span>
+  </div>
+  <button class="book-btn" data-movie="Dark Knight" data-poster="images/der.jpg">Book Now</button>
+</div>
+
+<!-- Movie 11 -->
+<div class="movie">
+  <img src="images/end.jpg">
+  <div class="info">
+    <div>
+      <h3>Avengers Endgame</h3>
+      <p class="meta">Action • 3h 1m</p>
+    </div>
+    <span class="rating">⭐ 8.9</span>
+  </div>
+  <button class="book-btn" data-movie="Avengers Endgame" data-poster="images/avg.jpg">Book Now</button>
+</div>
+
+<!-- Movie 12 -->
+<div class="movie">
+  <img src="images/dr.jpg">
+  <div class="info">
+    <div>
+      <h3>Doctor Strange</h3>
+      <p class="meta">Fantasy • 2h 5m</p>
+    </div>
+    <span class="rating">⭐ 8.1</span>
+  </div>
+  <button class="book-btn" data-movie="Doctor Strange" data-poster="images/dr.jpg">Book Now</button>
+</div>
+
+<!-- Movie 13 -->
+<div class="movie">
+  <img src="images/spi.webp">
+  <div class="info">
+    <div>
+      <h3>Spider-Man 2</h3>
+      <p class="meta">Action • 2h 20m</p>
+    </div>
+    <span class="rating">⭐ 8.3</span>
+  </div>
+  <button class="book-btn" data-movie="Spider-Man 2" data-poster="images/spi.webp">Book Now</button>
+</div>
+
+<!-- Movie 14 -->
+<div class="movie">
+  <img src="images/avenger.jpg">
+  <div class="info">
+    <div>
+      <h3>Avengers</h3>
+      <p class="meta">Action • 2h 23m</p>
+    </div>
+    <span class="rating">⭐ 8.0</span>
+  </div>
+  <button class="book-btn" data-movie="Avengers" data-poster="images/avenger.jpg">Book Now</button>
+</div>
+
+<!-- Movie 15 -->
+<div class="movie">
+  <img src="images/interstellar.jpg">
+  <div class="info">
+    <div>
+      <h3>Interstellar</h3>
+      <p class="meta">Sci-Fi • 2h 49m</p>
+    </div>
+    <span class="rating">⭐ 8.6</span>
+  </div>
+  <button class="book-btn" data-movie="Interstellar" data-poster="images/inc.jpg">Book Now</button>
+</div>
+
+<!-- Movie 16 -->
+<div class="movie">
+  <img src="images/jur.jpg">
+  <div class="info">
+    <div>
+      <h3>Jurassic Park</h3>
+      <p class="meta">Adventure • 2h 7m</p>
+    </div>
+    <span class="rating">⭐ 8.1</span>
+  </div>
+  <button class="book-btn" data-movie="Jurassic Park" data-poster="images/jur.jpg">Book Now</button>
+</div>
+
+<!-- Movie 17 -->
+<div class="movie">
+  <img src="images/ppt.jpg">
+  <div class="info">
+    <div>
+      <h3>Harry Potter 2</h3>
+      <p class="meta">Fantasy • 2h 41m</p>
+    </div>
+    <span class="rating">⭐ 7.9</span>
+  </div>
+  <button class="book-btn" data-movie="Harry Potter 2" data-poster="images/harry.jpg">Book Now</button>
+</div>
+
+<!-- Movie 18 -->
+<div class="movie">
+  <img src="images/civil.jpg">
+  <div class="info">
+    <div>
+      <h3>Civil War</h3>
+      <p class="meta">Action • 2h 27m</p>
+    </div>
+    <span class="rating">⭐ 8.4</span>
+  </div>
+  <button class="book-btn" data-movie="Civil War" data-poster="images/cep.jpg">Book Now</button>
+</div>
+
+<!-- Movie 19 -->
+<div class="movie">
+  <img src="images/iron.jpg">
+  <div class="info">
+    <div>
+      <h3>Iron Man 2</h3>
+      <p class="meta">Action • 2h 5m</p>
+    </div>
+    <span class="rating">⭐ 7.5</span>
+  </div>
+  <button class="book-btn" data-movie="Iron Man 2" data-poster="images/iron.jpg">Book Now</button>
+</div>
+
+<!-- Movie 20 -->
+<div class="movie">
+  <img src="images/verse.jpg">
+  <div class="info">
+    <div>
+      <h3>Spider-Verse</h3>
+      <p class="meta">Animation • 1h 57m</p>
+    </div>
+    <span class="rating">⭐ 8.7</span>
+  </div>
+  <button class="book-btn" data-movie="Spider-Verse" data-poster="images/spi.jpg">Book Now</button>
+</div>
+
+</div>
+
+<script>
+// BOOK BUTTON
+document.querySelectorAll(".book-btn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    let movie = this.getAttribute("data-movie");
+    let poster = this.parentElement.querySelector("img").src;
+
+    localStorage.setItem("movie", movie);
+    localStorage.setItem("poster", poster);
+    window.location.href = "seats.html";
+  });
+});
+
+// SEARCH FUNCTION
+document.getElementById("search").addEventListener("input", function() {
+  let value = this.value.toLowerCase();
+  document.querySelectorAll(".movie").forEach(movie => {
+    movie.style.display = movie.innerText.toLowerCase().includes(value)
+      ? "block" : "none";
+  });
+});
+</script>
+
+</body>
+</html>

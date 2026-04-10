@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment</title>
+<link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>💳 Payment</h1>
+
+    <div class="summary">
+        <p>Seats: <span id="seatCount"></span></p>
+        <p>Total: ₹<span id="totalAmount"></span></p>
+    </div>
+
+    <h2>Select Payment Method</h2>
+
+    <!-- ✅ Added IDs -->
+    <div class="methods">
+        <button id="btn-card" onclick="selectMethod('card')">Card</button>
+        <button id="btn-upi" onclick="selectMethod('upi')">UPI</button>
+        <button id="btn-net" onclick="selectMethod('netbanking')">Net Banking</button>
+    </div>
+
+    <!-- CARD -->
+    <div id="card" class="method-box">
+        <input type="text" placeholder="Card Number">
+        <input type="text" placeholder="Name on Card">
+        <input type="text" placeholder="Expiry">
+        <input type="text" placeholder="CVV">
+    </div>
+
+    <!-- UPI -->
+    <div id="upi" class="method-box">
+        <input type="text" placeholder="Enter UPI ID">
+
+        <!-- ✅ QR CODE ADDED -->
+        <div id="qr-section" style="text-align:center; margin-top:15px;">
+            <p>Scan & Pay</p>
+            <img src="images/qr.jpg" width="200">
+        </div>
+    </div>
+
+    <!-- NET BANKING -->
+    <div id="netbanking" class="method-box">
+        <select>
+            <option>Select Bank</option>
+            <option>SBI</option>
+            <option>HDFC</option>
+            <option>ICICI</option>
+        </select>
+    </div>
+
+    <button class="pay-btn" onclick="payNow()">Pay Now</button>
+</div>
+
+<script src="payment.js"></script>
+</body>
+</html>

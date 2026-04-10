@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Select Seats</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+ <h2 id="movie-name"></h2>
+  <div class="timings">
+    <button class="time active">10:00 AM</button>
+    <button class="time">1:30 PM</button>
+    <button class="time">6:00 PM</button>
+    <button class="time">9:30 PM</button>
+  </div>
+</div>
+
+
+
+<!-- MAIN -->
+<div class="container">
+
+  <div class="screen"></div>
+
+  <div class="legend">
+    <span class="seat"></span> Normal
+    <span class="seat vip"></span> VIP
+    <span class="seat selected"></span> Selected
+    <span class="seat occupied"></span> Booked
+  </div>
+
+  <div id="seatContainer"></div>
+
+</div>
+
+<!-- SUMMARY -->
+<div class="summary">
+  <p>Seats: <span id="count">0</span></p>
+  <p>Total: ₹<span id="total">0</span></p>
+</div>
+
+<button onclick="goToPayment()">Proceed to Payment</button>
+
+<script>
+const container = document.getElementById("seatContainer");
+const count = document.getElementById("count");
+const total = document.getElementById("total");
+
+let normalPrice = 150;
+let vipPrice = 250;
+
+const rows = 6;
+const seatsPerRow = 10;
+
+// timing select
+document.querySelectorAll(".time").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelector(".time.active").classList.remove("active");
+    btn.classList.add("active");
+  });
+});
+
+// generate seats
+for (let i = 0; i < rows; i++) {
+  let row = document.createElement("div");
+  row.classList.add("row");
+
+  let rowLetter = String.fromCharCode(65 + i); // A, B, C...
+
+  let label = document.createElement("span");
+  label.classList.add("row-label");
+  label.innerText = rowLetter;
+  row.appendChild(label);
+
+  for (let j = 1; j <= seatsPerRow; j++) {
+
+    if (j === 6) {
+      let gap = document.createElement("div");
+      gap.classList.add("gap");
+      row.appendChild(gap);
+    }
+
+    let seat = document.createElement("div");
+    seat.classList.add("seat");
+
+    // ✅ ADD SEAT NUMBER
+    let seatNumber = rowLetter + j;
+    seat.innerText = seatNumber;
+    seat.setAttribute("data-seat", seatNumber);
+
+    if (i >= 4) seat.classList.add("vip");
+
+    if (Math.random() < 0.15) {
+      seat.classList.add("occupied");
+    }
+
+    seat.addEventListener("click", () => {
+      if (!seat.classList.contains("occupied")) {
+        seat.classList.toggle("selected");
+        updateCount();
+      }
+    });
+
+    row.appendChild(seat);
+  }
+
+  container.appendChild(row);
+}
+
+// update count
+function updateCount() {
+  let selectedSeats = document.querySelectorAll(".seat.selected");
+  let totalPrice = 0;
+  let seatList = [];
+
+  selectedSeats.forEach(seat => {
+    totalPrice += seat.classList.contains("vip") ? vipPrice : normalPrice;
+
+    // ✅ STORE SELECTED SEAT NUMBERS
+    seatList.push(seat.getAttribute("data-seat"));
+  });
+
+  count.innerText = selectedSeats.length;
+  total.innerText = totalPrice;
+
+  console.log("Selected Seats:", seatList.join(", "));
+}
+
+// go to payment
+function goToPayment() {
+  let seats = count.innerText;
+  let amount = total.innerText;
+
+  if (seats == 0) {
+    alert("Please select at least 1 seat");
+    return;
+  }
+
+  localStorage.setItem("seats", seats);
+  localStorage.setItem("total", amount);
+
+  window.location.href = "payment.html";
+}
+</script>
+
+</body>
+</html>

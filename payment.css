@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Poppins;
+    background: linear-gradient(to right, #0f2027, #203a43);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+}
+
+.methods button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background: #444;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.methods button:hover {
+    background: #ff4b5c;
+}
+
+.method-box {
+    display: none;
+    margin-top: 15px;
+}
+
+.method-box input, select {
+    width: 90%;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 8px;
+    border: none;
+}
+
+.pay-btn {
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+    background: #00c853;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.method-box {
+  display: none;
+  margin-top: 15px;
+}
+
+.methods button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #555;
+  color: white;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.methods button.active {
+  background: #ff4d4d;
+}
+
+#qr-section img {
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0 15px rgba(0,255,150,0.3);
+}
