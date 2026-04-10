@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Ticket</title>
+<link rel="stylesheet" href="ticket.css">
+</head>
+<body>
+
+<div class="ticket">
+
+    <!-- LEFT POSTER -->
+    <img src="images/avenger.jpg" alt="Movie">
+
+    <!-- RIGHT CONTENT -->
+    <div class="ticket-content">
+
+        <h1>🎉 Booking Confirmed!</h1>
+
+        <p><strong>🎬 Movie:</strong> <span id="movie"></span></p>
+        <p><strong>🪑 Seats:</strong> <span id="seats"></span></p>
+        <p><strong>💰 Total:</strong> ₹<span id="total"></span></p>
+        <p><strong>🆔 Booking ID:</strong> <span id="bookingId"></span></p>
+
+        <div class="qr">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=MovieTicket" />
+        </div>
+
+        <p>🍿 Enjoy your movie!</p>
+
+        <button class="print-btn" onclick="printTicket()">🖨 Print Ticket</button>
+
+    </div>
+</div>
+<script src="ticket.js"></script>
+
+</body>
+</html>

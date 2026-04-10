@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Poppins;
+    background: linear-gradient(to right, #0f2027, #203a43);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* MAIN CARD */
+.ticket {
+    display: flex;
+    gap: 20px;
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 15px;
+    width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* POSTER */
+.ticket img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+/* CONTENT */
+.ticket-content {
+    flex: 1;
+}
+
+.ticket p {
+    margin: 6px 0;
+}
+
+.print-btn {
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+    background: #ff4b5c;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
